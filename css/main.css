@@ -1,3 +1,44 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
 .hidden {
     display: none;
+}
+
+div {
+    background-color: gray;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 50px;
+}
+
+header div {
+    height: 100px;
+}
+
+#background_image {
+    height: 500px;
+}
+
+#background .grid-con {
+    grid-column: 2/3;
+    grid-row: 1/1;
+}
+
+#slots {
+    margin-top: 200px;
+}
+
+.audio_slot {
+    background-color: rgb(56, 56, 56);
+    height: 100px;
+}
+
+#beats_wheel {
+    background-color: rgb(56, 56, 56);
+    height: 100px;
 }
