@@ -9,28 +9,45 @@ body {
     display: none;
 }
 
-div {
-    background-color: gray;
-    text-align: center;
-    align-content: center;
-    margin-bottom: 50px;
+
+header {
+    height: 100px;
+    background-color: black;
+    align-items: center;
 }
 
-header div {
-    height: 100px;
+#main-menu img {
+    padding-top: 5px;
+}
+
+#main-menu p, #main-menu img, label  {
+    cursor: pointer;
+}
+
+#main-menu p:hover, label:hover {
+    text-decoration: underline;
+}
+
+input, #discription {
+    display: none;
+}
+
+#main-nav input:checked ~ #discription {
+    display: block;
+    color: aqua;
+  }
+
+#background {
+    margin-top: 50px;
 }
 
 #background_image {
     height: 500px;
+    background-color: black;
 }
 
-#background .grid-con {
-    grid-column: 2/3;
-    grid-row: 1/1;
-}
-
-#slots {
-    margin-top: 200px;
+#slots, #beats {
+    margin-top: 30px;
 }
 
 .audio_slot {
@@ -38,7 +55,16 @@ header div {
     height: 100px;
 }
 
+
 #beats_wheel {
     background-color: rgb(56, 56, 56);
     height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main-menu {
+    display: flex;
+    justify-content: space-around;
 }

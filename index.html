@@ -14,34 +14,57 @@
         <div class="col-start-1 col-span-3">
             <p>The Music Mixer</p>
         </div>
-        <div class="col-start-4 col-span-9">
-            <p>Instructions, settings, other info</p>
+        <div class="col-start-4 col-span-9" id="main-menu">
+            <div>
+                <input type="checkbox" id="how-to">
+                <label for="how-to">How to play</label>
+            </div>
+            <div id="discription">
+                <p>Drag audio from slot and drop it!<br>
+                Play with combination and enjoy your music!</p>
+            </div>
+            <div>
+                <p>Plsylist</p>
+            </div>
+            <div>
+                <img width="32" height="32" src="https://img.icons8.com/windows/32/FFFFFF/settings--v1.png" alt="settings--v1"/>
+            </div>
         </div>
     </header>
 
     <section id="background" class="full-width-grid-con">
         <div id="background_image" class="col-start-2 col-span-1">
-            <p>Background Image</p>
-            <section id="slots" class="grid-con">
-                <div id="slot1" class="audio_slot col-start-1 col-span-3">
-                    <p>Audio Slot</p>
-                </div>
-                <div id="slot2" class="audio_slot col-start-4 col-span-3">
-                    <p>Audio Slot</p>
-                </div>
-                <div id="slot3" class="audio_slot col-start-7 col-span-3">
-                    <p>Audio Slot</p>
-                </div>
-                <div id="slot4" class="audio_slot col-start-10 col-span-3">
-                    <p>Audio Slot</p>
-                </div>
-            </section>
-            <section id="beats" class="grid-con">
-                <div id="beats_wheel" class="col-start-3 col-span-8">
-                    <p>Scrolling Beat Options</p>
-                </div>
-            </section>
+            <div id="dropZone"></div>
         </div>
+    </section>
+
+    <section id="slots" class="grid-con">
+        <div id="slot1" class="audio_slot col-start-1 col-span-3">
+            <p>Audio Slot</p>
+        </div>
+        <div id="slot2" class="audio_slot col-start-4 col-span-3">
+            <p>Audio Slot</p>
+        </div>
+        <div id="slot3" class="audio_slot col-start-7 col-span-3">
+            <p>Audio Slot</p>
+        </div>
+        <div id="slot4" class="audio_slot col-start-10 col-span-3">
+            <p>Audio Slot</p>
+        </div>
+    </section>
+
+    <section id="beats" class="grid-con">
+        <div id="beats_wheel" class="col-start-4 col-span-6">
+            <div>
+                <img width="50" height="50" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/replay.png" alt="replay"/>
+            </div>
+            <div>
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/circled-play--v1.png" alt="circled-play--v1">
+            </div>
+        <div>
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/high-volume--v1.png" alt="high-volume--v1"/>
+        </div>
+    </div>
     </section>
 
     <script src="js/main.js"></script> 
