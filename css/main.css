@@ -12,34 +12,29 @@ body {
 
 header {
     height: 100px;
-    background-color: black;
+    color: black;
     align-items: center;
 }
 
-#main-menu img {
-    padding-top: 5px;
+#logo {
+    scale: 90%;
 }
 
-#main-menu p, #main-menu img, label  {
-    cursor: pointer;
+#main-menu nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 30px;
 }
 
-#main-menu p:hover, label:hover {
+#main-menu nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#main-menu nav ul li a:hover {
     text-decoration: underline;
 }
 
-input, #discription {
-    display: none;
-}
-
-#main-nav input:checked ~ #discription {
-    display: block;
-    color: aqua;
-  }
-
-#background {
-    margin-top: 50px;
-}
 
 #dropzones {
     height: 500px;
