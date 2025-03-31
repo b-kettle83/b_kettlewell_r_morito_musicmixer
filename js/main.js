@@ -1,12 +1,16 @@
 console.log("JS file connected");
 
-const resetButton = document.querySelector('#audios button');
+const resetButton = document.querySelector('#reset_button'),
+    playButton = document.querySelector('#play_button'),
+    audioBox = document.querySelector('#audio_container');
 
 let audios = document.querySelectorAll('#audios img'),
+    loops = document.querySelectorAll('#audio_container audio'),
     dropZones = document.querySelectorAll('.drop_zone'),
     originalContainer = document.querySelector('#audios'),
     originalZone,
     zoneTaken,
+    removedAudio,
     draggedPiece;
 
     dropZones.forEach(zone => zone.zoneTaken = false);
@@ -15,6 +19,10 @@ function resetAudios() {
     audios.forEach(audio => originalContainer.appendChild(audio));
 
     dropZones.forEach(zone => zone.zoneTaken = false);
+
+    audioBox.innerHTML = '';
+
+    loops = document.querySelectorAll('#audio_container audio');
 }
 
 function startDrag () {
@@ -23,6 +31,10 @@ function startDrag () {
     draggedPiece = this;
 
     originalZone = this.parentElement;
+
+    removedAudio = document.querySelector(`#audio_container audio[src = "audios/${this.dataset.audioName}.wav"]`);
+    
+    loops = document.querySelectorAll('#audio_container audio');
 }
 
 function handleDragOver (e) {
@@ -43,9 +55,42 @@ function handleDrop (e) {
     this.zoneTaken = true;
 
     originalZone.zoneTaken = false;
+
+    if (removedAudio) {
+        audioBox.removeChild(removedAudio);
+    }
+
+    loadNewAudio(draggedPiece.dataset.audioName);
+
+    loops = document.querySelectorAll('#audio_container audio');
+
+}
+
+function loadNewAudio (audioId) {
+    let newAudio = document.createElement('audio');
+    newAudio.src = `audios/${audioId}.wav`;
+    audioBox.appendChild(newAudio);
+    newAudio.loop = true;
+    newAudio.load();
+
+    loops = document.querySelectorAll('#audio_container audio');
+}
+
+function playAudios () {
+
+    loops.forEach(loop => {
+
+        loop.pause();
+        loop.currentTime = 0;
+        loop.play();
+
+    });
+
 }
 
 resetButton.addEventListener('click', resetAudios);
+
+playButton.addEventListener('click', playAudios);
 
 audios.forEach(audio => audio.addEventListener('dragstart', startDrag));
 
