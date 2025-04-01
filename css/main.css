@@ -73,6 +73,12 @@ header {
     width: 100px;
 }
 
+#audios, #audio_controls {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
 .lightbox {
     width: 100vw;
     height: 100vh; 

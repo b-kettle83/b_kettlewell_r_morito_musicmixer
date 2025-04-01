@@ -53,20 +53,19 @@
         </div>
     </section>
 
-    <div id="audios" class="grid-con">
+    <div class="grid-con">
+        <section id="audios" class="col-span-full">
 
-        <img src="images/acidBase.svg" data-audio-name="acidBase" class="audio_image col-start-1 col-span-2">
-        <img src="images/discoGuitar.svg" data-audio-name="discoGuitar" class="audio_image col-start-3 col-span-2">
-        <img src="images/guitar1.svg" data-audio-name="funkybass" class="audio_image col-start-5 col-span-2">
-        <img src="images/drum.svg" data-audio-name="kickDrum" class="audio_image col-start-7 col-span-2">
-        <img src="images/guitar2.svg" data-audio-name="happyGuitar" class="audio_image col-start-9 col-span-2">
-        <img src="images/cymbal.svg" data-audio-name="snareDrum" class="audio_image col-start-11 col-span-2">
-        <img src="images/pianoGuitar.svg" data-audio-name="pianoguitar" class="audio_image col-start-9 col-span-2">
-        <img src="images/popDrums.svg" data-audio-name="popdrums" class="audio_image col-start-11 col-span-2">
-        
-        <button id="reset_button">Reset</button>
-        <button id="play_button">Play</button>
+            <img src="images/acidBase.svg" data-audio-name="acidBase" class="audio_image">
+            <img src="images/discoGuitar.svg" data-audio-name="discoGuitar" class="audio_image">
+            <img src="images/guitar1.svg" data-audio-name="funkybass" class="audio_image">
+            <img src="images/drum.svg" data-audio-name="kickDrum" class="audio_image">
+            <img src="images/guitar2.svg" data-audio-name="happyGuitar" class="audio_image">
+            <img src="images/cymbal.svg" data-audio-name="snareDrum" class="audio_image">
+            <img src="images/pianoGuitar.svg" data-audio-name="pianoguitar" class="audio_image">
+            <img src="images/popDrums.svg" data-audio-name="popdrums" class="audio_image">
 
+        </section>
     </div>
 
     <!--<section id="slots" class="grid-con">
@@ -87,15 +86,13 @@
     <section id="beats" class="grid-con">
         <div id="beats_wheel" class="col-start-4 col-span-6">
             <div>
-                <img width="50" height="50" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/replay.png" alt="replay"/>
+                <img width="50" height="50" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/replay.png" alt="replay" id="reset_button"/>
             </div>
             <div>
-            <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/circled-play--v1.png" alt="circled-play--v1">
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/circled-play--v1.png" alt="circled-play--v1" id="play_button" />
             </div>
-        <div>
-            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/high-volume--v1.png" alt="high-volume--v1"/>
+            <input id="volume_slider" type="range" min="0" max="100" step="1">
         </div>
-    </div>
     </section>
 
     <script src="js/main.js"></script> 
