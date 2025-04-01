@@ -2,6 +2,7 @@ console.log("JS file connected");
 
 const resetButton = document.querySelector('#reset_button'),
     playButton = document.querySelector('#play_button'),
+    volumeSlider = document.querySelector('#volume_slider'),
     audioBox = document.querySelector('#audio_container');
 
 let audios = document.querySelectorAll('#audios img'),
@@ -88,9 +89,15 @@ function playAudios () {
 
 }
 
+function volumeLevel () {
+    loops.forEach(loop => loop.volume = (this.value / 100));
+}
+
 resetButton.addEventListener('click', resetAudios);
 
 playButton.addEventListener('click', playAudios);
+
+volumeSlider.addEventListener('change', volumeLevel);
 
 audios.forEach(audio => audio.addEventListener('dragstart', startDrag));
 
