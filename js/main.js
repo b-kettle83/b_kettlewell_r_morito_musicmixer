@@ -97,3 +97,6 @@ audios.forEach(audio => audio.addEventListener('dragstart', startDrag));
 dropZones.forEach(zone => zone.addEventListener('dragover', handleDragOver));
 
 dropZones.forEach(zone => zone.addEventListener('drop', handleDrop));
+
+
+

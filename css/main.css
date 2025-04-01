@@ -72,3 +72,46 @@ header {
 .audio_image {
     width: 100px;
 }
+
+.lightbox {
+    width: 100vw;
+    height: 100vh; 
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.85);
+
+    display: none;
+}
+
+.lightbox_close {
+    position: relative;
+    top: 20px;
+    left: 95%;
+
+    color: white;
+    font-size: 3em;
+
+    text-decoration: none;
+
+    font-weight: bolder;
+}
+
+.lightbox_close:hover { opacity: 0.5; color: red; }
+
+#lightbox:target { display: block; }
+
+.lb_heading {
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.lb_text {
+    font-size: 1.3em;
+    padding-left: 250px;
+    line-height: 2;
+}
