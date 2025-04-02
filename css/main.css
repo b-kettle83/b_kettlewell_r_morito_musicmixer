@@ -140,3 +140,7 @@ header {
 .svg-filter img {
     filter: saturate(10%) invert(70%) sepia(83%) saturate(365%) brightness(100%) contrast(80%);
 }
+
+.svg-filter.disabled {
+    filter: none !important;
+}

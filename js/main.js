@@ -22,6 +22,8 @@ let audios = document.querySelectorAll('#audios img'),
         filterElements.forEach(element => {
             element.classList.remove('svg-filter');
         });
+
+        
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -37,6 +39,9 @@ function resetAudios() {
     audioBox.innerHTML = '';
 
     loops = document.querySelectorAll('#audio_container audio');
+
+
+
 
 }
 
