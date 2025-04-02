@@ -120,7 +120,7 @@ header {
     font-weight: bolder;
 }
 
-.lightbox_close:hover { opacity: 0.5; color: red; }
+.lightbox_close:hover { opacity: 0.5; color: yellow; }
 
 #lightbox:target { display: block; }
 
