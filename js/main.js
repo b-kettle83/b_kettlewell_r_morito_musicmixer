@@ -16,6 +16,21 @@ let audios = document.querySelectorAll('#audios img'),
 
     dropZones.forEach(zone => zone.zoneTaken = false);
 
+
+    function removeSvgFilter() {
+        let filterElements = document.querySelectorAll('.svg-filter');
+        filterElements.forEach(element => {
+            element.classList.remove('svg-filter');
+        });
+
+        
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        removeSvgFilter();
+    });
+    
+
 function resetAudios() {
     audios.forEach(audio => originalContainer.appendChild(audio));
 
@@ -24,6 +39,10 @@ function resetAudios() {
     audioBox.innerHTML = '';
 
     loops = document.querySelectorAll('#audio_container audio');
+
+
+
+
 }
 
 function startDrag () {
@@ -65,6 +84,9 @@ function handleDrop (e) {
 
     loops = document.querySelectorAll('#audio_container audio');
 
+
+    this.classList.add('svg-filter');
+
 }
 
 function loadNewAudio (audioId) {
@@ -93,7 +115,11 @@ function volumeLevel () {
     loops.forEach(loop => loop.volume = (this.value / 100));
 }
 
-resetButton.addEventListener('click', resetAudios);
+
+resetButton.addEventListener('click', function() {
+    resetAudios();
+    removeSvgFilter();
+});
 
 playButton.addEventListener('click', playAudios);
 
@@ -104,6 +130,4 @@ audios.forEach(audio => audio.addEventListener('dragstart', startDrag));
 dropZones.forEach(zone => zone.addEventListener('dragover', handleDragOver));
 
 dropZones.forEach(zone => zone.addEventListener('drop', handleDrop));
-
-
 

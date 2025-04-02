@@ -90,6 +90,10 @@ header {
     padding: 30px;
 }
 
+#beats_wheel img, #beats_wheel input {
+    cursor: pointer;
+}
+
 .lightbox {
     width: 100vw;
     height: 100vh; 
@@ -131,4 +135,12 @@ header {
     font-size: 1.3em;
     padding-left: 250px;
     line-height: 2;
+}
+
+.svg-filter img {
+    filter: saturate(10%) invert(70%) sepia(83%) saturate(365%) brightness(100%) contrast(80%);
+}
+
+.svg-filter.disabled {
+    filter: none !important;
 }
