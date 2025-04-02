@@ -26,9 +26,8 @@ let audios = document.querySelectorAll('#audios img'),
         
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        removeSvgFilter();
-    });
+    removeSvgFilter();
+  
     
 
 function resetAudios() {
