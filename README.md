@@ -12,10 +12,11 @@ To run this project locally, follow these steps:
 git clone https://github.com/your-username/music-mixer.git
 
 ## Usage
-1. grag and drop audio elements onto the mixer area.
+1. Drag and drop audio elements onto the mixer area.
 2. click on an element to play or remove it.
 3. Adjust volume and effects as needed.
 4. Enjoy mixing and experimenting with different sound combinations!
+*you can see brief explanation of how to use this music mixer in tutorial
 
 ## Features
 - **Drag-and-Drop Functionality** → Easily add and remove sound elements.
@@ -34,11 +35,12 @@ Please follow these steps:
 ## History
 - Week 2-3: Initial commits, project setup, research.
 - Week 6: Checkpoint submission with early implementation.
+-Week 7-11: Design SVG, Get audios, Start building website
 - Week 12: Final project submission.
 
 ## Credits
-- Developers:
-- Designer: 
+- Developers: Benjamin Kettlewell & Rin Morito
+- Designer: Benjamin Kettlewell & Rin Morito
 - Instructor: Jake Meloche
 
 ## Licence
